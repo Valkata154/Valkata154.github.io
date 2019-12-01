@@ -1,0 +1,87 @@
+////////////////
+// NAVIGATION //
+////////////////
+
+.navbar{
+    // Adding border
+    border-bottom: 1px solid white;
+    padding: 0 !important;
+}
+
+// Link properties
+.nav-link{
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    color: white !important;
+    padding: 2rem !important;
+    overflow: hidden;
+    position: relative;
+    transition: color .2s .4s, font-weight .2s .4s, border-left .1s, border-right .1s;
+
+    // Changin the background + effect on each link without the active one at certain width only
+    @media only screen and (min-width: $bp-xm + 0.25){
+        &:hover:not(.nav-active){
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            color: grey !important;
+            font-weight: 500;
+
+            &::before,
+            &::after {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        // Before and after properties
+        &::before,
+        &::after  {
+            content: '';
+            background-color: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 49%;
+            left: 0;
+            z-index: -1;
+            padding: 0 3.5rem;
+            -webkit-transform: translateY(-3.7rem);
+            transform: translateY(-3.7rem);
+            transition: all .3s .3s;
+        }
+
+        &::after {
+            top: 50%;
+            bottom: 0;
+            -webkit-transform: translateY(3.5rem);
+            transform: translateY(3.5rem);
+        }
+    }
+}
+
+// Adding spin animation for the icon when hovered
+.nav-icon{
+    font-size: 4rem;
+    color: white; 
+    padding: 1rem;
+    // Media Queries to remove animation
+    @media only screen and (min-width: $bp-xm + 0.25){ &:hover{ animation: spin 3s infinite linear; } }
+
+    // Media Queries
+    @media only screen and (max-width: $bp-s){ font-size: 3rem; }
+
+    @media only screen and (max-width: $bp-xxs){ font-size: 2rem; }
+}
+
+// Active class for the navigation bar at certain width only
+@media only screen and (min-width: $bp-xm + 0.25){
+    .nav-active{
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        color: grey !important;
+        font-weight: 500;
+        background-color: white !important;
+        transition: all;
+    }
+}

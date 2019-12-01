@@ -1,0 +1,246 @@
+////////////////
+// ANIMATIONS //
+////////////////
+
+// Animation to move surname from bottom left
+@keyframes moveInBotRight{
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem) translateY(-20rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(15rem) translateY(1.5rem);
+    }
+
+    90% { transform: translateX(15rem) translateY(1.5rem); }
+
+    100% { transform: translate(0); }
+}
+
+// Animation to move name from top left
+@keyframes moveInTopLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(20rem) translateY(20rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-20rem) translateY(10rem);
+    }
+
+    90% { transform: translateX(-20rem) translateY(10rem); }
+
+    100% { transform: translate(0); }
+}
+
+// Animation for showing lines
+@keyframes line-anim{
+    to{ stroke-dashoffset: 0; }
+}
+
+// Fills the svg 
+@keyframes fill {
+    0%{ fill: transparent; }
+    100%{ fill: white; }
+}
+
+// Used to keep opacity to 0 of the 's so that it appears after a period of time
+@keyframes opacity {
+    from{ opacity: 0; }
+    to{ opacity: 0; }
+}
+
+// Spin animation for the logo
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    
+    to{transform:rotate(360deg);}
+}
+
+// Shine animation for the image
+@keyframes shine {
+    0%{left: -25rem;}
+
+    10%{left: 30rem;}
+
+    100%{left: 30rem;}
+}
+
+// Moves the personal part to the left
+@keyframes moveRight {
+    0%{margin-right: 0rem;}
+
+    100%{
+        margin-right: 15rem;
+    }
+}
+
+@media only screen and (max-width: $bp-xl){
+    @keyframes moveRight {
+        0%{margin-right: 0rem;}
+
+        100%{
+            margin-right: 7rem;
+        }
+    }
+}
+
+// Moves the motivational part to the right
+@keyframes moveLeft {
+    from{margin-left: 0rem;}
+
+    to{margin-left: 7rem;}
+}
+
+// Animation to make the details of uni dissapear and reapear after time
+@keyframes dissapear{
+    0%{ opacity: 1; }
+
+    40% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    65% {
+        opacity: 0;
+        transform:translateX(-20rem);
+    }
+
+    100% { 
+        transform: translate(0); 
+        opacity: 1;
+    }
+}
+
+// Popup button to appear from top right 
+@keyframes appearTopRight{
+    from {
+        opacity: 0;
+        transform: translateX(10rem) translateY(-10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem) translateY(0rem);
+    }
+}
+
+// Popup subject to appear from top
+@keyframes appearTop{
+    from {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+// Popup subject to appear from bottom
+@keyframes appearBottom{
+    from {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+// Make the popup dissapear to the left only at certain width
+@media only screen and (min-width: $bp-xm + 0.25){
+    @keyframes dissapearLeft{
+        0% {
+            opacity: 1;
+            transform: translateX(0rem);
+        }
+
+        20%{ opacity: 1; }
+
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+}
+
+
+// Move the Skill name up and down when hovered
+@keyframes hover {
+	50% { transform: translateY(-3px); }
+
+	100% { transform: translateY(-6px); }
+}
+
+// Increase and decrease the shadow of the skill name when hovered
+@keyframes hover-shadow {
+	0% {
+		transform: translateY(6px);
+		opacity: .4;
+    }
+
+	50% {
+		transform: translateY(3px);
+		opacity: 1;
+	}
+
+
+	100% {
+		transform: translateY(6px);
+		opacity: .4;
+	}
+}
+
+// Animation to show and move up the FULL star
+@keyframes up-fill {
+	0% {
+		transform: translateY(0);
+        fill: transparent;
+	}
+
+    70%{
+        transform: translateY(-6px);
+		fill: white;
+    }
+
+	100% {
+		transform: translateY(0);
+		fill: white;
+	}
+}
+
+// Animation to show the HALF star
+@keyframes half-star-opacity {
+	0% { opacity: 0; }
+
+    70%{ opacity: 1; }
+
+	100% { opacity: 1; }
+}
+
+// Move the HALF star up
+@keyframes half-star-up {
+	0% { transform: translateY(0); }
+
+    70%{ transform: translateY(-.6rem); }
+
+	100% { transform: translateY(0); }
+}
+
+// Bounce animation for icons on contact page
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-2rem); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-.7rem); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}

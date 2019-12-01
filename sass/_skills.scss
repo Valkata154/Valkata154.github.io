@@ -1,0 +1,527 @@
+////////////
+// SKILLS //
+////////////
+
+.skills {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    font-family: 'Lato', sans-serif;
+    background-color: grey;
+
+    // Heading
+    &__heading{
+        grid-column: 1/-1;
+        justify-self: center;
+        color: white;
+        margin-top: 10rem;
+        font-weight: 200;
+        font-size: 5rem;
+        padding-bottom: 2rem;
+        transition: transform .3s, font-weight .2s ease;
+
+        // Media Queries
+        @media only screen and (min-width: $bp-xm + 0.25){ @include heading-border-middle; }
+
+        @media only screen and (max-width: $bp-xs){
+            font-size: 3.5rem;
+            margin: 3rem 0rem 0rem 0rem;
+        }
+    }
+
+    // List with all skills and stars
+    &__list{
+        margin: 7.5rem 7.5rem 5rem 7.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items:center;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-m){ margin: 4rem; } 
+
+        @media only screen and (max-width: $bp-xxm){ grid-template-columns: repeat(2, 1fr); }
+    }
+
+    // Name properties for each skill
+    &__name{
+        justify-self:center;
+        list-style: none;        
+        color: white;
+        font-weight: 300;
+        font-size: 3rem;
+        margin-bottom: 11.5rem;
+        transition: all .2s;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-xs){
+            font-size: 1.8rem;
+            margin-bottom: 5rem;
+        }
+
+        // Before shadow  only at certain width
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:before {
+                pointer-events: none;
+                position: absolute;
+                z-index: -1;
+                content: '';
+                top: 100%;
+                left: 5%;
+                height: 10px;
+                width: 90%;
+                opacity: 0;
+                background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%);
+                transition-duration: .2s;
+                transition-property: transform opacity;
+            }
+
+            // When name is hovered add hover animation and add shadow animation on the before
+            &:hover{
+                transform: translateY(-6px);
+                animation: hover 1.5s .2s linear infinite alternate;
+
+                &:before {
+                    opacity: .4;
+                    transform: translateY(6px);
+                    animation: hover-shadow 1.5s .3s linear infinite alternate;
+                }
+            }
+        }
+    }
+
+    // Make the stars be one next to each other with flexbox
+    &__stars{
+        display: flex;
+        justify-self:center;
+
+        & > *:not(:last-child){ margin-right: 2px; } 
+    }
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xs){
+        svg{
+            width: 1.5rem;
+            height: 1.5rem;
+            padding-right: .2rem;
+        }     
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // For each skill when name is hovered lift star up and fill it, and align them in exact place in grid
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // HTML 4.5 stars
+    &__html{
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .html__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .html__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .html__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .html__stars > .star--full:nth-child(4){ animation: up-fill .7s forwards .6s; }
+
+            &:hover + .html__stars > .star--half{
+                animation: half-star-up .7s forwards .8s;
+                &::before{ animation: half-star-opacity .7s forwards .8s; }
+            }
+        }
+
+        @media only screen and (max-width: $bp-xm){
+            & + .html__stars > .star--full{fill: white;}
+            & + .html__stars > .star--half::before{opacity: 1;}
+        }
+    }
+
+    // CSS 4 stars
+    &__css{
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .css__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .css__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .css__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .css__stars > .star--full:nth-child(4){ animation: up-fill .7s forwards .6s; }
+        }
+
+        @media only screen and (max-width: $bp-xm){
+            & + .css__stars > .star--full{fill: white;}
+            & + .css__stars > .star--half::before{opacity: 1;}
+            & + .css__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // JavaScript 4 stars
+    &__js{
+        grid-column: 3/4;
+        grid-row: 1/2;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .js__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .js__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .js__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .js__stars > .star--full:nth-child(4){ animation: up-fill .7s forwards .6s; }
+        }
+
+        @media only screen and (max-width: $bp-xm){
+            & + .js__stars > .star--full{fill: white;}
+            & + .js__stars > .star--half::before{opacity: 1;}
+            & + .js__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // Bootstrap 4.5 stars
+    &__boot{
+        grid-column: 4/5;
+        grid-row: 1/2;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .boot__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .boot__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .boot__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .boot__stars > .star--full:nth-child(4){ animation: up-fill .7s forwards .6s; }
+
+            &:hover + .boot__stars > .star--half{
+                animation: half-star-up .7s forwards .8s;
+                &::before{ animation: half-star-opacity .7s forwards .8s; }
+            }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .boot__stars > .star--full{fill: white;}
+            & + .boot__stars > .star--half::before{opacity: 1;}
+        }
+    }
+
+    // jQuery 3.5 stars
+    &__jq{
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .jq__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .jq__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .jq__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .jq__stars > .star--half{
+                animation: half-star-up .7s forwards .6s;
+                &::before{ animation: half-star-opacity .7s forwards .6s; }
+            }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .jq__stars > .star--full{fill: white;}
+            & + .jq__stars > .star--half::before{opacity: 1;}
+            & + .jq__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // NodeJS 3.5 stars
+    &__node{
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .node__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .node__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .node__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .node__stars > .star--half{
+                animation: half-star-up .7s forwards .6s;
+                &::before{ animation: half-star-opacity .7s forwards .6s; }
+            }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .node__stars > .star--full{fill: white;}
+            & + .node__stars > .star--half::before{opacity: 1;}
+            & + .node__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // Database 4 stars
+    &__db{
+        grid-column: 3/4;
+        grid-row: 2/3;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .db__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .db__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .db__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .db__stars > .star--full:nth-child(4){ animation: up-fill .7s forwards .6s; }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .db__stars > .star--full{fill: white;}
+            & + .db__stars > .star--half::before{opacity: 1;}
+            & + .db__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // Linux 3 stars
+    &__linux{
+        grid-column: 4/5;
+        grid-row: 2/3;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .linux__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .linux__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .linux__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .linux__stars > .star--full{fill: white;}
+            & + .linux__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // Java 3.5 stars
+    &__java{
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .java__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .java__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .java__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .java__stars > .star--half{
+                animation: half-star-up .7s forwards .6s;
+                &::before{ animation: half-star-opacity .7s forwards .6s; }
+            }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .java__stars > .star--full{fill: white;}
+            & + .java__stars > .star--half::before{opacity: 1;}
+            & + .java__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+
+    // C# 3.5 stars
+    &__sharp{
+        grid-column: 3/4;
+        grid-row: 3/4;
+
+        // Media Queries for stars only at certain width
+        @media only screen and (max-width: $bp-xxm){
+            grid-column: 2/3;
+            grid-row: 5/6;
+        }
+        @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover + .sharp__stars > .star--full:nth-child(1){ animation: up-fill .7s forwards; }
+
+            &:hover + .sharp__stars > .star--full:nth-child(2){ animation: up-fill .7s forwards .2s; }
+
+            &:hover + .sharp__stars > .star--full:nth-child(3){ animation: up-fill .7s forwards .4s; }
+
+            &:hover + .sharp__stars > .star--half{
+                animation: half-star-up .7s forwards .6s;
+                &::before{ animation: half-star-opacity .7s forwards .6s; }
+            }
+        }
+        @media only screen and (max-width: $bp-xm){
+            & + .sharp__stars > .star--full{fill: white;}
+            & + .sharp__stars > .star--half::before{opacity: 1;}
+            & + .sharp__stars > .star--full:nth-child(5){ fill: transparent;}
+        }
+    }
+}
+
+////////////////////////////////////////////////////////
+// Align all the stars to an exact position in the grid
+////////////////////////////////////////////////////////
+
+// HTML
+.html__stars{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+// CSS
+.css__stars{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+// JavaScript
+.js__stars{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+}
+
+// Bootstrap
+.boot__stars{
+    grid-column: 4/5;
+    grid-row: 1/2; 
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
+
+// jQuery
+.jq__stars{
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    // Media Queries
+
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+}
+
+// NodeJS
+.node__stars{
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}
+
+// Database
+.db__stars{
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
+
+// Linux
+.linux__stars{
+    grid-column: 4/5;
+    grid-row: 2/3;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+}
+
+// Java
+.java__stars{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+}
+
+// C#
+.sharp__stars{
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxm){
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+}
+
+// Full star properties
+.star--full{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 1px;
+    z-index: 6;
+}
+
+// Half star properties using SVG on before
+.star--half{
+    position: relative;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 1px;
+    z-index: 6;
+
+    &::before{
+        content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='24' height='24' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");
+        position: absolute;
+        z-index: 9;
+        opacity: 0;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-xs){ content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='13' height='17' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");  }
+    }
+}

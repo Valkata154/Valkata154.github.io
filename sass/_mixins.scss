@@ -1,0 +1,30 @@
+////////////
+// MIXINS //
+////////////
+
+// Mixin for heading border effect from middle to left/right
+@mixin heading-border-middle {
+    // Move up
+    &:hover{ transform: translateY(-1rem); }
+
+    // Border bottom effect from middle to left/right
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 50%;
+        top: 80%;
+        background: white;
+        transition: width .3s, margin-top .25s, left .3s;
+    }
+
+    &:hover::before,
+    &:hover::after  {
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    &:hover::before { left: 0; }
+}

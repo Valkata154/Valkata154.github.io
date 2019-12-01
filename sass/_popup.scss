@@ -1,0 +1,113 @@
+////////////
+// POPUP //
+////////////
+
+.popup{
+   position: fixed;
+   font-family: 'Lato', sans-serif;
+   height: .3rem;
+   width: .3rem;
+   background-color: rgba($color: rgb(94, 94, 94), $alpha: .9);
+   opacity: 0;
+   z-index: 2000;
+   left: 50%;
+   top: 50%;
+   display: grid;
+   grid-template-columns: 100vw;
+   grid-template-rows: repeat(3, min-content);
+
+   // Subject heading properties
+   &__subject{
+      z-index: 2010;
+      color: white;
+      font-weight: 300;
+      font-size: 3.5rem;
+      justify-self: center;
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+      text-align: center;
+
+      // Media Queries
+      @media only screen and (max-width: $bp-xxm){ font-size: 2.5rem; }
+
+      @media only screen and (max-width: $bp-s){ font-size: 2rem; }
+
+      @media only screen and (max-width: $bp-xxs){ font-size: 1.8rem; }
+   }
+
+   // Exit icon
+   &__btn{
+      justify-self: flex-end;
+      margin-top: 2rem;
+      margin-right: 3.5rem;
+      z-index: 2010;
+      font-size: 5rem;
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+
+      // Media Queries
+      @media only screen and (max-width: $bp-xxm){
+         font-size: 4rem;
+         margin-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-s){ font-size: 3.5rem; }
+
+      @media only screen and (max-width: $bp-xxs){ font-size: 3rem; }
+
+      // Move exit icon up when hover and down when clicked
+      i{
+         color: white;
+         transition: all .2s;
+         // Media Queries to remove the effect at certain width
+         @media only screen and (min-width: $bp-xm + 0.25){
+            &:hover{ transform: translateY(-.5rem); }
+
+            &:active{ transform: translateY(.5rem); }
+         }
+      }
+   }
+
+   // Details properties
+   &__details{
+      margin-top: 5rem;
+      padding: 5rem;
+      border: 1px solid white;
+      width: 60%;
+      justify-self: center;
+      text-align: center;
+      color: white;
+      font-weight: 300;
+      font-size: 1.6rem;
+      opacity: 0;
+      visibility: hidden;
+
+      // Media Queries
+      @media only screen and (max-width: $bp-l){ width: 80%; }
+
+      @media only screen and (max-width: $bp-m){ font-size: 1.5rem; }
+
+      @media only screen and (max-width: $bp-xxm){ font-size: 1.3rem; }
+
+      @media only screen and (max-width: $bp-s){ font-size: 1.1rem; }
+
+      @media only screen and (max-width: $bp-xxs){ padding: 2.5rem; }
+
+      span{ font-weight: 900; }
+   }
+
+   // Class to be added to expand the popup when Read More is clicked
+   &-expand{
+      transition: opacity .3s, width .6s ease-in, height .6s ease-in, top .6s ease-in, left .6s ease-in;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+   }
+}
+
+// Class to blur everything apart from the popup 
+.blur{ & > *:not(.popup){filter: blur(8px);} }

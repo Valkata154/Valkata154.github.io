@@ -1,0 +1,25 @@
+// MEDIA BREAKPOINTS
+$bp-xxl: 87.5em;          // 1400px
+$bp-xl: 81.25em;         // 1300px
+$bp-l: 68.75em;         // 1100px
+$bp-lm: 62.5em;        // 1000px
+$bp-m: 56.25em;       // 900px
+$bp-xm: 50em;        // 800px
+$bp-xxm: 43.75em;   // 700px
+$bp-xxxm: 37.5em;  // 600px
+$bp-s: 31.25em;   // 500px
+$bp-xs: 25em;    // 400px
+$bp-xxs: 21.9em;// 350px
+
+//////////////////
+// GLOBAL RESET //
+//////////////////
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }// 1 rem = 10px; 10px / 16px = 62.5%

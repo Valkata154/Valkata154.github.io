@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font - Lato -->    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,400,700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4d10275504.js" crossorigin="anonymous"></script>
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+    <title>Vladimirov - Portfolio</title>
+</head>
+<body class="body">
+    
+    <!-- Pop-up -->
+    <div class="popup">
+        <!-- Exit button -->
+        <a class="popup__btn"><i class="far fa-times-circle"></i></a>
+        <!-- Subject Heading -->
+        <h2 class="popup__subject" id="popup__subject">Computer Systems 1</h2>
+        <!-- Subject Details -->
+        <p class="popup__details" id="popup__details">&nbsp;</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: transparent">
+        <!-- Navbar Icon-->
+        <a class="navbar-brand" href="#"><i class="fas fa-laptop-code nav-icon"></i></a>
+        <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar Links-->
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link nav-active" id="home" href="#headersec">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="about" href="#aboutsec">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="education" href="#educationsec">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="skills" href="#skillssec">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact" href="#contactsec">Contact</a>
+            </li>
+        </div>
+    </nav>  
+
+    <!-- Header Section -->
+    <header class="header" id="headersec">
+        <div class="header-presentation">
+            <!-- First Name -->
+            <span class="header__first-name">Valeri</span>
+            <!-- Surname -->
+            <span class="header__surname">Vladimirov<span class="letter">'s</span></span>
+            <!-- Portfolio SVG -->
+            <svg class="header__portfolio-logo" width="276" height="73" viewBox="0 0 776 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.256989" y="0.536987" width="776" height="112" fill="black">
+                <rect fill="white" x="0.256989" y="0.536987" width="776" height="112"/>
+                <path d="M29.975 60.404C34.501 60.404 38.5647 59.7713 42.166 58.506C45.7673 57.2407 48.809 55.4887 51.291 53.25C53.8217 51.0113 55.744 48.3833 57.058 45.366C58.4207 42.3 59.102 38.9663 59.102 35.365C59.102 27.4323 56.6687 21.3247 51.802 17.042C46.9353 12.7593 39.6597 10.618 29.975 10.618H10.776V60.404H29.975ZM29.975 4.70499C42.093 4.70499 51.218 7.35732 57.35 12.662C63.5307 17.9667 66.621 25.5343 66.621 35.365C66.621 39.891 65.7693 44.052 64.066 47.848C62.3627 51.644 59.9293 54.929 56.766 57.703C53.6027 60.4283 49.758 62.5697 45.232 64.127C40.706 65.6357 35.6203 66.39 29.975 66.39H10.776V108H3.25699V4.70499H29.975Z"/>
+                <path d="M179.424 56.316C179.424 64.2973 178.232 71.5487 175.847 78.07C173.463 84.5427 170.105 90.0907 165.773 94.714C161.442 99.2887 156.235 102.841 150.151 105.372C144.117 107.854 137.449 109.095 130.149 109.095C122.849 109.095 116.182 107.854 110.147 105.372C104.113 102.841 98.9296 99.2887 94.5982 94.714C90.2669 90.0907 86.9089 84.5427 84.5242 78.07C82.1396 71.5487 80.9472 64.2973 80.9472 56.316C80.9472 48.3833 82.1396 41.1807 84.5242 34.708C86.9089 28.1867 90.2669 22.6387 94.5982 18.064C98.9296 13.4407 104.113 9.86366 110.147 7.33299C116.182 4.80232 122.849 3.53699 130.149 3.53699C137.449 3.53699 144.117 4.80232 150.151 7.33299C156.235 9.81499 161.442 13.3677 165.773 17.991C170.105 22.6143 173.463 28.1867 175.847 34.708C178.232 41.1807 179.424 48.3833 179.424 56.316ZM171.686 56.316C171.686 49.1133 170.689 42.6407 168.693 36.898C166.698 31.1553 163.875 26.2887 160.225 22.298C156.575 18.3073 152.195 15.2657 147.085 13.173C141.975 11.0317 136.33 9.96099 130.149 9.96099C124.017 9.96099 118.396 11.0317 113.286 13.173C108.176 15.2657 103.772 18.3073 100.073 22.298C96.4232 26.2887 93.5762 31.1553 91.5322 36.898C89.5369 42.6407 88.5392 49.1133 88.5392 56.316C88.5392 63.5673 89.5369 70.0643 91.5322 75.807C93.5762 81.501 96.4232 86.3433 100.073 90.334C103.772 94.3247 108.176 97.3663 113.286 99.459C118.396 101.552 124.017 102.598 130.149 102.598C136.33 102.598 141.975 101.552 147.085 99.459C152.195 97.3663 156.575 94.3247 160.225 90.334C163.875 86.3433 166.698 81.501 168.693 75.807C170.689 70.0643 171.686 63.5673 171.686 56.316Z"/>
+                <path d="M228.556 55.732C233.13 55.732 237.218 55.1967 240.82 54.126C244.47 53.0067 247.536 51.425 250.018 49.381C252.548 47.337 254.471 44.8793 255.785 42.008C257.099 39.1367 257.756 35.9003 257.756 32.299C257.756 24.9503 255.347 19.4997 250.529 15.947C245.759 12.3943 238.776 10.618 229.578 10.618H210.671V55.732H228.556ZM274.4 108H267.976C267.148 108 266.443 107.878 265.859 107.635C265.323 107.343 264.812 106.832 264.326 106.102L231.184 64.2C230.794 63.6647 230.381 63.2023 229.943 62.813C229.553 62.4237 229.091 62.1317 228.556 61.937C228.069 61.6937 227.461 61.5233 226.731 61.426C226.049 61.3287 225.198 61.28 224.176 61.28H210.671V108H203.152V4.70499H229.578C241.452 4.70499 250.334 7.01666 256.223 11.64C262.16 16.2147 265.129 22.955 265.129 31.861C265.129 35.803 264.447 39.4043 263.085 42.665C261.722 45.9257 259.751 48.797 257.172 51.279C254.641 53.7123 251.551 55.7077 247.901 57.265C244.299 58.8223 240.236 59.8687 235.71 60.404C236.878 61.134 237.924 62.1073 238.849 63.324L274.4 108Z"/>
+                <path d="M354.718 11.056H318.437V108H310.918V11.056H274.418V4.70499H354.718V11.056Z"/>
+                <path d="M379.626 10.91V54.345H426.711V60.55H379.626V108H372.107V4.70499H434.011V10.91H379.626Z"/>
+                <path d="M545.28 56.316C545.28 64.2973 544.087 71.5487 541.703 78.07C539.318 84.5427 535.96 90.0907 531.629 94.714C527.297 99.2887 522.09 102.841 516.007 105.372C509.972 107.854 503.305 109.095 496.005 109.095C488.705 109.095 482.037 107.854 476.003 105.372C469.968 102.841 464.785 99.2887 460.454 94.714C456.122 90.0907 452.764 84.5427 450.38 78.07C447.995 71.5487 446.803 64.2973 446.803 56.316C446.803 48.3833 447.995 41.1807 450.38 34.708C452.764 28.1867 456.122 22.6387 460.454 18.064C464.785 13.4407 469.968 9.86366 476.003 7.33299C482.037 4.80232 488.705 3.53699 496.005 3.53699C503.305 3.53699 509.972 4.80232 516.007 7.33299C522.09 9.81499 527.297 13.3677 531.629 17.991C535.96 22.6143 539.318 28.1867 541.703 34.708C544.087 41.1807 545.28 48.3833 545.28 56.316ZM537.542 56.316C537.542 49.1133 536.544 42.6407 534.549 36.898C532.553 31.1553 529.731 26.2887 526.081 22.298C522.431 18.3073 518.051 15.2657 512.941 13.173C507.831 11.0317 502.185 9.96099 496.005 9.96099C489.873 9.96099 484.252 11.0317 479.142 13.173C474.032 15.2657 469.627 18.3073 465.929 22.298C462.279 26.2887 459.432 31.1553 457.388 36.898C455.392 42.6407 454.395 49.1133 454.395 56.316C454.395 63.5673 455.392 70.0643 457.388 75.807C459.432 81.501 462.279 86.3433 465.929 90.334C469.627 94.3247 474.032 97.3663 479.142 99.459C484.252 101.552 489.873 102.598 496.005 102.598C502.185 102.598 507.831 101.552 512.941 99.459C518.051 97.3663 522.431 94.3247 526.081 90.334C529.731 86.3433 532.553 81.501 534.549 75.807C536.544 70.0643 537.542 63.5673 537.542 56.316Z"/>
+                <path d="M625.436 101.649V108H569.007V4.70499H576.526V101.649H625.436Z"/>
+                <path d="M650.381 108H642.862V4.70499H650.381V108Z"/>
+                <path d="M772.692 56.316C772.692 64.2973 771.499 71.5487 769.115 78.07C766.73 84.5427 763.372 90.0907 759.041 94.714C754.709 99.2887 749.502 102.841 743.419 105.372C737.384 107.854 730.717 109.095 723.417 109.095C716.117 109.095 709.449 107.854 703.415 105.372C697.38 102.841 692.197 99.2887 687.866 94.714C683.534 90.0907 680.176 84.5427 677.792 78.07C675.407 71.5487 674.215 64.2973 674.215 56.316C674.215 48.3833 675.407 41.1807 677.792 34.708C680.176 28.1867 683.534 22.6387 687.866 18.064C692.197 13.4407 697.38 9.86366 703.415 7.33299C709.449 4.80232 716.117 3.53699 723.417 3.53699C730.717 3.53699 737.384 4.80232 743.419 7.33299C749.502 9.81499 754.709 13.3677 759.041 17.991C763.372 22.6143 766.73 28.1867 769.115 34.708C771.499 41.1807 772.692 48.3833 772.692 56.316ZM764.954 56.316C764.954 49.1133 763.956 42.6407 761.961 36.898C759.965 31.1553 757.143 26.2887 753.493 22.298C749.843 18.3073 745.463 15.2657 740.353 13.173C735.243 11.0317 729.597 9.96099 723.417 9.96099C717.285 9.96099 711.664 11.0317 706.554 13.173C701.444 15.2657 697.039 18.3073 693.341 22.298C689.691 26.2887 686.844 31.1553 684.8 36.898C682.804 42.6407 681.807 49.1133 681.807 56.316C681.807 63.5673 682.804 70.0643 684.8 75.807C686.844 81.501 689.691 86.3433 693.341 90.334C697.039 94.3247 701.444 97.3663 706.554 99.459C711.664 101.552 717.285 102.598 723.417 102.598C729.597 102.598 735.243 101.552 740.353 99.459C745.463 97.3663 749.843 94.3247 753.493 90.334C757.143 86.3433 759.965 81.501 761.961 75.807C763.956 70.0643 764.954 63.5673 764.954 56.316Z"/>
+                </mask>
+                <path d="M29.975 60.404C34.501 60.404 38.5647 59.7713 42.166 58.506C45.7673 57.2407 48.809 55.4887 51.291 53.25C53.8217 51.0113 55.744 48.3833 57.058 45.366C58.4207 42.3 59.102 38.9663 59.102 35.365C59.102 27.4323 56.6687 21.3247 51.802 17.042C46.9353 12.7593 39.6597 10.618 29.975 10.618H10.776V60.404H29.975ZM29.975 4.70499C42.093 4.70499 51.218 7.35732 57.35 12.662C63.5307 17.9667 66.621 25.5343 66.621 35.365C66.621 39.891 65.7693 44.052 64.066 47.848C62.3627 51.644 59.9293 54.929 56.766 57.703C53.6027 60.4283 49.758 62.5697 45.232 64.127C40.706 65.6357 35.6203 66.39 29.975 66.39H10.776V108H3.25699V4.70499H29.975Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M179.424 56.316C179.424 64.2973 178.232 71.5487 175.847 78.07C173.463 84.5427 170.105 90.0907 165.773 94.714C161.442 99.2887 156.235 102.841 150.151 105.372C144.117 107.854 137.449 109.095 130.149 109.095C122.849 109.095 116.182 107.854 110.147 105.372C104.113 102.841 98.9296 99.2887 94.5982 94.714C90.2669 90.0907 86.9089 84.5427 84.5242 78.07C82.1396 71.5487 80.9472 64.2973 80.9472 56.316C80.9472 48.3833 82.1396 41.1807 84.5242 34.708C86.9089 28.1867 90.2669 22.6387 94.5982 18.064C98.9296 13.4407 104.113 9.86366 110.147 7.33299C116.182 4.80232 122.849 3.53699 130.149 3.53699C137.449 3.53699 144.117 4.80232 150.151 7.33299C156.235 9.81499 161.442 13.3677 165.773 17.991C170.105 22.6143 173.463 28.1867 175.847 34.708C178.232 41.1807 179.424 48.3833 179.424 56.316ZM171.686 56.316C171.686 49.1133 170.689 42.6407 168.693 36.898C166.698 31.1553 163.875 26.2887 160.225 22.298C156.575 18.3073 152.195 15.2657 147.085 13.173C141.975 11.0317 136.33 9.96099 130.149 9.96099C124.017 9.96099 118.396 11.0317 113.286 13.173C108.176 15.2657 103.772 18.3073 100.073 22.298C96.4232 26.2887 93.5762 31.1553 91.5322 36.898C89.5369 42.6407 88.5392 49.1133 88.5392 56.316C88.5392 63.5673 89.5369 70.0643 91.5322 75.807C93.5762 81.501 96.4232 86.3433 100.073 90.334C103.772 94.3247 108.176 97.3663 113.286 99.459C118.396 101.552 124.017 102.598 130.149 102.598C136.33 102.598 141.975 101.552 147.085 99.459C152.195 97.3663 156.575 94.3247 160.225 90.334C163.875 86.3433 166.698 81.501 168.693 75.807C170.689 70.0643 171.686 63.5673 171.686 56.316Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M228.556 55.732C233.13 55.732 237.218 55.1967 240.82 54.126C244.47 53.0067 247.536 51.425 250.018 49.381C252.548 47.337 254.471 44.8793 255.785 42.008C257.099 39.1367 257.756 35.9003 257.756 32.299C257.756 24.9503 255.347 19.4997 250.529 15.947C245.759 12.3943 238.776 10.618 229.578 10.618H210.671V55.732H228.556ZM274.4 108H267.976C267.148 108 266.443 107.878 265.859 107.635C265.323 107.343 264.812 106.832 264.326 106.102L231.184 64.2C230.794 63.6647 230.381 63.2023 229.943 62.813C229.553 62.4237 229.091 62.1317 228.556 61.937C228.069 61.6937 227.461 61.5233 226.731 61.426C226.049 61.3287 225.198 61.28 224.176 61.28H210.671V108H203.152V4.70499H229.578C241.452 4.70499 250.334 7.01666 256.223 11.64C262.16 16.2147 265.129 22.955 265.129 31.861C265.129 35.803 264.447 39.4043 263.085 42.665C261.722 45.9257 259.751 48.797 257.172 51.279C254.641 53.7123 251.551 55.7077 247.901 57.265C244.299 58.8223 240.236 59.8687 235.71 60.404C236.878 61.134 237.924 62.1073 238.849 63.324L274.4 108Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M354.718 11.056H318.437V108H310.918V11.056H274.418V4.70499H354.718V11.056Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M379.626 10.91V54.345H426.711V60.55H379.626V108H372.107V4.70499H434.011V10.91H379.626Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M545.28 56.316C545.28 64.2973 544.087 71.5487 541.703 78.07C539.318 84.5427 535.96 90.0907 531.629 94.714C527.297 99.2887 522.09 102.841 516.007 105.372C509.972 107.854 503.305 109.095 496.005 109.095C488.705 109.095 482.037 107.854 476.003 105.372C469.968 102.841 464.785 99.2887 460.454 94.714C456.122 90.0907 452.764 84.5427 450.38 78.07C447.995 71.5487 446.803 64.2973 446.803 56.316C446.803 48.3833 447.995 41.1807 450.38 34.708C452.764 28.1867 456.122 22.6387 460.454 18.064C464.785 13.4407 469.968 9.86366 476.003 7.33299C482.037 4.80232 488.705 3.53699 496.005 3.53699C503.305 3.53699 509.972 4.80232 516.007 7.33299C522.09 9.81499 527.297 13.3677 531.629 17.991C535.96 22.6143 539.318 28.1867 541.703 34.708C544.087 41.1807 545.28 48.3833 545.28 56.316ZM537.542 56.316C537.542 49.1133 536.544 42.6407 534.549 36.898C532.553 31.1553 529.731 26.2887 526.081 22.298C522.431 18.3073 518.051 15.2657 512.941 13.173C507.831 11.0317 502.185 9.96099 496.005 9.96099C489.873 9.96099 484.252 11.0317 479.142 13.173C474.032 15.2657 469.627 18.3073 465.929 22.298C462.279 26.2887 459.432 31.1553 457.388 36.898C455.392 42.6407 454.395 49.1133 454.395 56.316C454.395 63.5673 455.392 70.0643 457.388 75.807C459.432 81.501 462.279 86.3433 465.929 90.334C469.627 94.3247 474.032 97.3663 479.142 99.459C484.252 101.552 489.873 102.598 496.005 102.598C502.185 102.598 507.831 101.552 512.941 99.459C518.051 97.3663 522.431 94.3247 526.081 90.334C529.731 86.3433 532.553 81.501 534.549 75.807C536.544 70.0643 537.542 63.5673 537.542 56.316Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M625.436 101.649V108H569.007V4.70499H576.526V101.649H625.436Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M650.381 108H642.862V4.70499H650.381V108Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+                <path d="M772.692 56.316C772.692 64.2973 771.499 71.5487 769.115 78.07C766.73 84.5427 763.372 90.0907 759.041 94.714C754.709 99.2887 749.502 102.841 743.419 105.372C737.384 107.854 730.717 109.095 723.417 109.095C716.117 109.095 709.449 107.854 703.415 105.372C697.38 102.841 692.197 99.2887 687.866 94.714C683.534 90.0907 680.176 84.5427 677.792 78.07C675.407 71.5487 674.215 64.2973 674.215 56.316C674.215 48.3833 675.407 41.1807 677.792 34.708C680.176 28.1867 683.534 22.6387 687.866 18.064C692.197 13.4407 697.38 9.86366 703.415 7.33299C709.449 4.80232 716.117 3.53699 723.417 3.53699C730.717 3.53699 737.384 4.80232 743.419 7.33299C749.502 9.81499 754.709 13.3677 759.041 17.991C763.372 22.6143 766.73 28.1867 769.115 34.708C771.499 41.1807 772.692 48.3833 772.692 56.316ZM764.954 56.316C764.954 49.1133 763.956 42.6407 761.961 36.898C759.965 31.1553 757.143 26.2887 753.493 22.298C749.843 18.3073 745.463 15.2657 740.353 13.173C735.243 11.0317 729.597 9.96099 723.417 9.96099C717.285 9.96099 711.664 11.0317 706.554 13.173C701.444 15.2657 697.039 18.3073 693.341 22.298C689.691 26.2887 686.844 31.1553 684.8 36.898C682.804 42.6407 681.807 49.1133 681.807 56.316C681.807 63.5673 682.804 70.0643 684.8 75.807C686.844 81.501 689.691 86.3433 693.341 90.334C697.039 94.3247 701.444 97.3663 706.554 99.459C711.664 101.552 717.285 102.598 723.417 102.598C729.597 102.598 735.243 101.552 740.353 99.459C745.463 97.3663 749.843 94.3247 753.493 90.334C757.143 86.3433 759.965 81.501 761.961 75.807C763.956 70.0643 764.954 63.5673 764.954 56.316Z" stroke="white" stroke-width="6" mask="url(#path-1-outside-1)"/>
+            </svg>                                
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="aboutsec">
+        <div class="about__information--personal">
+            <!-- Container for the hover effect on the image -->
+            <div class="about__img-container">
+                <!-- Shine animation figure with a remove class used so that shine class can be selected and removed -->
+                <figure class="about__img-remove about__img-shine">
+                    <!-- My Image-->
+                    <img src="/img/me.jpg" alt="Valeri Vladimirov Image" class="about__img">
+                </figure>
+            </div>
+            <!-- My Details -->
+            <div class="about__details">
+                <!-- Name -->
+                <p class="about__name">Valeri Vladimirov</p>
+                <!-- Country -->
+                <p class="about__location"><i class="fas fa-map-marker-alt"></i>Edinburgh, Scotland</p>
+                <!-- University -->
+                <p class="about__university"><i class="fas fa-graduation-cap"></i>Edinburgh Napier University</p>
+            </div>
+            <!-- Small Description -->
+            <p class="about__text">I'm a 20 year old student from Bulgaria, currently working toward a degree in Software Engineering at Edinburgh Napier University. In addition to that, Web Development is something I'm striving to master.</p>
+        </div>
+        <!-- My motivation -->
+        <div class="about__information--motivational">
+            <!-- How I started programming heading and text -->
+            <h1 class="about__more--heading">How it started</h1>
+            <p class="about__more--text">It was in High School when I found out what I would like to do in the future. From the first time I solved a task in C++ in a Computer Systems class till now I have been concerned that this should be the field in which I want to specialize. And thats why I made the decision to pursue Software Engineering at Edinburgh Napier University. After starting my academic education I became even more intrigued by the subject and therefore decided to spend most of my free time gaining additional knowledge. Which was in the forms of taking online courses on Udemy, creating various projects, watching tutorials on youtube and making a lot of research and studies.</p>
+            <!-- What motivates me heading and text -->            
+            <h1 class="about__motivation--heading">Motivation</h1>
+            <p class="about__motivation--text">For me computers and software programs are the future of the world and I would like to contribute to that future. Web Development is something that really I like and try to spend as much time as possible creating various websites, learning new techniques and trying to improve with each day. I would love to work as a Web Developer and I think that I would be a great fit, since I  have invested a lot of time and effort into preparing myself for a career as a Software Engineer and ultimately for the position of a Web Developer.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="educationsec">
+        <!-- Education Heading -->
+        <h1 class="education__heading">Education</h1>
+        <!-- University Part -->
+        <div class="education-uni">
+            <!-- University Heading -->
+            <h2 class="education-uni__heading">University</h2>
+            <div class="buttons">
+                <!-- Buttons for each year -->
+                <a href="javascript:;" class="education-uni__btn education-uni__btn--1 active" id="education-uni__btn--1">Year 1</a>
+                <a href="javascript:;" class="education-uni__btn education-uni__btn--2" id="education-uni__btn--2">Year 2</a>
+                <a href="javascript:;" class="education-uni__btn education-uni__btn--3" id="education-uni__btn--3">Year 3</a>
+                <a href="javascript:;" class="education-uni__btn education-uni__btn--4" id="education-uni__btn--4">Year 4</a>
+            </div>
+            <!-- University Details -->
+            <div class="education-uni__details">
+                <!-- University Year -->
+                <h3 class="education-uni__year" id="uni__year">First Year</h3>
+                <!-- University Subjects -->
+                <ul class="education-uni__subjects">
+                    <!-- Subject Name -->
+                    <li class="subject" id="subject--1">Computer Systems 1</li>
+                    <!-- Subject Grade -->
+                    <p class="subject__grade" id="subject__grade--1">Grade:<span class="grade" id="grade--1">---</span></p>
+                    <!-- Subject Read More Button -->
+                    <a href="javascript:;" class="subject__button" id="subject__button--1">Read More<i class="fas fa-arrow-right"></i></a>
+                    <li class="subject" id="subject--2">Information Systems in Organisations</li>
+                    <p class="subject__grade" id="subject__grade--2">Grade:<span class="grade" id="grade--2">---</span></p>
+                    <a href="javascript:;" class="subject__button" id="subject__button--2">Read More<i class="fas fa-arrow-right"></i></a>
+                    <li class="subject" id="subject--3">Foundations of Software Design and Development</li>
+                    <p class="subject__grade" id="subject__grade--3">Grade:<span class="grade" id="grade--3">---</span></p>
+                    <a href="javascript:;" class="subject__button" id="subject__button--3">Read More<i class="fas fa-arrow-right"></i></a>
+                    <li class="subject" id="subject--4">Introduction to Human Computer Interaction</li>
+                    <p class="subject__grade" id="subject__grade--4">Grade:<span class="grade" id="grade--4">---</span></p>
+                    <a href="javascript:;" class="subject__button" id="subject__button--4">Read More<i class="fas fa-arrow-right"></i></a>
+                    <li class="subject" id="subject--5">Programming Fundamentals</li>
+                    <p class="subject__grade" id="subject__grade--5">Grade:<span class="grade" id="grade--5">---</span></p>
+                    <a href="javascript:;" class="subject__button" id="subject__button--5">Read More<i class="fas fa-arrow-right"></i></a>
+                    <li class="subject" id="subject--6">Mathematics for Software Engineering</li>
+                    <p class="subject__grade" id="subject__grade--6">Grade:<span class="grade" id="grade--6">---</span></p>
+                    <a href="javascript:;" class="subject__button" id="subject__button--6">Read More<i class="fas fa-arrow-right"></i></a>
+                </ul>
+            </div>
+        </div>
+        <!-- Udemy Part -->
+        <div class="education-udemy">
+            <!-- Udemy Heading -->
+            <h2 class="education-udemy__heading">Udemy</h2>
+            <!-- Udemy Details -->
+            <div class="education-udemy__details">
+                <!-- Udemy Courses -->
+                <ul class="education-udemy__courses">
+                    <!-- Course Name and Link -->
+                    <li class="course course--1"><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank" class="course__link course--1__link">The Complete JavaScript Course</a></li>
+                    <!-- Course Description -->
+                    <p class="course__description course__description--1">Gained advanced knowledge and understanding of how to use JavaScript in projects, both ES5 and ES6+. As well as OOP and AJAX.</p>
+                    <li class="course course--2"><a href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" class="course__link course--2__link">Advanced CSS and Sass</a></li>
+                    <p class="course__description course__description--2">Mastered Flexbox and Grid, as well as responsive design, animations and learned how to use Sass.</p>
+                    <li class="course course--3"><a href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/" target="_blank" class="course__link course--3__link">HTML5 and CSS3</a></li>
+                    <p class="course__description course__description--3">Gained my basic knowledge of HTMl5 and CSS3.</p>
+                    <li class="course course--4"><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank" class="course__link course--4__link">The Web Developer Bootcamp</a></li>
+                    <p class="course__description course__description--4">Learned how to make a full website, both backend and frontend. Learned how to combine HTML, CSS3, JavaScript, NodeJS, MongoDB, Express and more.</p>
+                    <li class="course course--5"><a href="https://www.udemy.com/course/java-the-complete-java-developer-course/" target="_blank" class="course__link course--5__link">Java Programming Masterclass</a></li>
+                    <p class="course__description course__description--5">Learned advanced Java and OOP, as well as JavaFX and more.</p>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skillssec">
+        <!-- Skills Heading -->
+        <h1 class="skills__heading">Skills</h1>
+        <!-- Skills List with Skill Name and Skill Stars for each -->
+        <ul class="skills__list">
+            <!-- HTML5 4.5 -->
+            <li class="skills__name skills__html">HTML5</li>
+            <div class="skills__stars html__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- CSS3 4 -->            
+            <li class="skills__name skills__css">CSS3</li>
+            <div class="skills__stars css__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- JavaScript 4 -->                        
+            <li class="skills__name skills__js">JavaScript</li>
+            <div class="skills__stars js__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- Bootstrap 4.5 -->            
+            <li class="skills__name skills__boot">Bootstrap</li>
+            <div class="skills__stars boot__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- jQuery 3.5 -->                        
+            <li class="skills__name skills__jq">jQuery</li>
+            <div class="skills__stars jq__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- NodeJS 3.5 -->                        
+            <li class="skills__name skills__node">NodeJS</li>
+            <div class="skills__stars node__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- Database 4 -->                                    
+            <li class="skills__name skills__db">Database</li>
+            <div class="skills__stars db__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- Linux 3 -->                                                
+            <li class="skills__name skills__linux">Linux</li>
+            <div class="skills__stars linux__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- Java 3.5 -->                        
+            <li class="skills__name skills__java">Java</li>
+            <div class="skills__stars java__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+            <!-- C# 3.5 -->                                    
+            <li class="skills__name skills__sharp">C#</li>
+            <div class="skills__stars sharp__stars"><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--half"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div><div class="star--full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg></div></div>
+        </ul>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="contact" id="contactsec">
+        <!-- Contact Heading -->
+        <h1 class="contact__heading">Contact Information</h1>
+        <!-- Contact List with Icon and Text about each contact way -->
+        <ul class="contact__list">
+            <!-- UK Phone Number -->
+            <li class="contact__ukphone--icon contact__icon"><a class="icon__link"><i class="fas fa-phone"></i></a></li>
+            <div class="contact__text contact__text--ukphone"><li class="contact__ukphone--text">+44 74 93 803633</li></div>
+            <!-- BG Phone Number -->
+            <li class="contact__bgphone--icon contact__icon"><a class="icon__link"><i class="fas fa-phone"></i></a></li>
+            <div class="contact__text contact__text--bgphone"><li class="contact__bgphone--text">+359 895 730322</li></div>
+            <!-- Github -->            
+            <li class="contact__github--icon contact__icon"><a href="https://github.com/Valkata154" target="_blank" class="icon__link"><i class="fab fa-github"></i></a></li>
+            <div class="contact__text contact__text--github"><li class="contact__github--text">/Valkata154</li></div>
+            <!-- Email -->            
+            <li class="contact__email--icon contact__icon"><a class="icon__link"><i class="far fa-envelope"></i></a></li>
+            <div class="contact__text contact__text--email"><li class="contact__email--text">valkata154@gmail.com</li></div>
+            <!-- Facebook -->            
+            <li class="contact__facebook--icon contact__icon"><a href="https://www.facebook.com/valeri.vladimirov.39" target="_blank" class="icon__link"><i class="fab fa-facebook-f"></i></a></li>
+            <div class="contact__text contact__text--facebook"><li class="contact__facebook--text">Valeri Vladimirov</li></div>
+            <!-- Instagram -->            
+            <li class="contact__instagram--icon contact__icon"><a href="https://www.instagram.com/valerivladimirov/" target="_blank" class="icon__link"><i class="fab fa-instagram"></i></a></li>
+            <div class="contact__text contact__text--instagram"><li class="contact__instagram--text">valerivladimirov</li></div>
+        </ul>
+        <!-- Copyright Section Paragraph -->
+        <p class="copyright">
+            &copy; Copyright 2019 built by Valeri Vladimirov. Made using HTML5, CSS3 flexbox, grid, various animations, hover and click effects, JavaScript to remove/add classes, css and text, jQuery and Bootstrap for the navigation menu. This website was built to be used as a portfolio/cv when applying for a job.
+        </p>        
+    </footer>
+
+    <!-- Bootstrap, jQuery and JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
+    

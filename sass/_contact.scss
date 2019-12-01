@@ -1,0 +1,365 @@
+//////////////
+// CONTACT ///
+//////////////
+
+.contact{
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(46,46,46,1) 80%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content repeat(2, 1fr);
+    font-family: 'Lato', sans-serif;
+    padding-top: 4.5rem;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-xxxm){grid-template-rows: min-content 1fr min-content;}
+
+    // Contact heading
+    &__heading{
+        grid-column: 1/-1;
+        justify-self: center;
+        color: white;
+        margin-top: 10rem;
+        font-weight: 200;
+        font-size: 5rem;
+        padding-bottom: 2rem;
+        transition: transform .3s, font-weight .2s ease;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-l){ margin-bottom: 5rem; }
+
+        @media only screen and (max-width: $bp-xxm){ margin-bottom: 12.5rem; }
+
+        @media only screen and (max-width: $bp-xxxm){
+            font-size: 3.5rem;
+            margin: 3rem 0rem;}
+
+        // Remove heading effect at certain width
+        @media only screen and (min-width: $bp-xm + 0.25){ @include heading-border-middle; }
+
+        @media only screen and (max-width: $bp-xs){ font-size: 2.5rem;}
+    }
+
+    // List properties
+    &__list{
+        color: white;
+        display: grid;
+        margin-top: 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        grid-template-columns: repeat(2, 1fr);
+
+        // Media Queries
+        @media only screen and (max-width: $bp-xxxm){ grid-template-columns: 1fr; }
+
+        @media only screen and (max-width: $bp-xs){ margin-top: 0; }
+    }
+
+    // Text properties
+    &__text {
+        font-size: 1.8rem;
+        justify-self: center;
+        overflow: hidden;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-xxm){ font-size: 1.4rem; }
+    }
+
+    // Icon properties
+    &__icon{
+        font-size: 5rem;
+        text-align: center;
+        justify-self: center;
+        z-index: 5;
+        overflow: hidden;
+
+        // Media Queries
+        @media only screen and (max-width: $bp-xm){
+            justify-self: flex-start;
+            margin-left: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-xxm){ font-size: 3rem; }
+
+        @media only screen and (max-width: $bp-xxxm){
+            justify-self: center;
+            padding-right: 20rem;
+        }
+
+        @media only screen and (min-width: $bp-xm + 0.25){
+            // Adding bounce animation when each icon is hovered only for certain width
+            &:hover{ animation: bounce 2s infinite cubic-bezier(0.280, 0.840, 0.420, 1); }
+        }
+    }
+}
+
+// Copyright section properties
+.copyright{
+    justify-self: center;
+    color: lightgrey;
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: 50%;
+    text-align: center;
+    padding: 5rem 5rem 0 5rem ;
+    margin-top: 14rem;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-l){
+        width: 75%;
+        margin-top: 12rem;
+    }
+
+    @media only screen and (max-width: $bp-xxm){
+        font-size: 1rem;
+        margin-top: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-xxxm){
+        margin-top: 0rem;
+        align-self: flex-start;
+    }
+
+    @media only screen and (max-width: $bp-s){ width: 90%; }
+
+    @media only screen and (max-width: $bp-xs){
+        width: 100%;
+        padding: 2.5rem 2.5rem 0 2.5rem;
+        font-size: .8rem;
+    }
+}
+
+// Changin the link to white;
+.icon__link:visited,
+.icon__link:link{ color: white; }
+
+//////////////////////////////////////////
+// ALIGNING EVERYTHING IN THE GRID
+//////////////////////////////////////////
+
+.contact__ukphone--icon,
+.contact__text--ukphone{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.contact__bgphone--icon,
+.contact__text--bgphone{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    // Media Queries
+    @media only screen and (max-width: $bp-l){ margin-right: 15rem; }
+
+    @media only screen and (max-width: $bp-xxxm){ margin-right: 0; }
+}
+
+.contact__github--icon,
+.contact__text--github{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.contact__email--icon,
+.contact__text--email{
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-l){ margin-right: 15rem; }
+
+    @media only screen and (max-width: $bp-xxxm){ margin-right: 0; }
+}
+
+.contact__facebook--icon,
+.contact__text--facebook{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.contact__instagram--icon,
+.contact__text--instagram{
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    // Media Queries
+    @media only screen and (max-width: $bp-l){ margin-right: 15rem; }
+
+    @media only screen and (max-width: $bp-xxxm){  margin-right: 0; }
+}
+
+// Media Queries to realign the icons and text
+@media only screen and (max-width: $bp-xxxm){
+    .contact__ukphone--icon,
+    .contact__text--ukphone{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .contact__bgphone--icon,
+    .contact__text--bgphone{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .contact__github--icon,
+    .contact__text--github{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    .contact__email--icon,
+    .contact__text--email{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .contact__facebook--icon,
+    .contact__text--facebook{
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+
+    .contact__instagram--icon,
+    .contact__text--instagram{
+        grid-row: 6/7;
+        grid-column: 1/2;
+    }
+}
+
+//////////////////////////////////////////
+// ALIGNING THE TEXT LEFT FROM THE ICON
+//////////////////////////////////////////
+
+.contact__text--ukphone,
+.contact__text--bgphone{ margin-left: 24rem; }
+
+.contact__text--github{ margin-left: 16rem; }
+
+.contact__text--email{ margin-left: 25rem; }
+
+.contact__text--facebook,
+.contact__text--instagram{ margin-left: 20rem; }
+
+// Media Queries to realign the text
+@media only screen and (max-width: $bp-xm){
+    .contact__text--ukphone{   margin-left: 6rem; }
+
+    .contact__text--bgphone{  margin-left: 17rem; }
+
+    .contact__text--github{  margin-left: 2rem; }
+
+    .contact__text--email{ margin-left: 21rem; }
+
+    .contact__text--instagram{ margin-left: 16rem; }
+
+    .contact__text--facebook{ margin-left: 6rem; }
+}
+
+// Media Queries to realign the text
+@media only screen and (max-width: $bp-xxm){
+    .contact__text--ukphone{ margin-left: 9rem; }
+
+    .contact__text--bgphone{ margin-left: 20rem; }
+
+    .contact__text--email{ margin-left: 20rem; }
+}
+
+// Media Queries to realign the text
+@media only screen and (max-width: $bp-xxxm){
+    .contact__text--ukphone{ margin-left: 8rem; }
+
+    .contact__text--bgphone{  margin-left: 8rem; }
+
+    .contact__text--github{  margin-left: 1rem; }
+
+    .contact__text--email{ margin-left: 8rem; }
+
+    .contact__text--instagram{  margin-left: 4rem; }
+
+    .contact__text--facebook{ margin-left: 4.5rem; }
+}
+
+////////////////////////////////////
+// HIDING THE TEXT BEHIND THE ICON 
+////////////////////////////////////
+// Only at a certain width
+@media only screen and (min-width: $bp-xm + 0.25){
+    .contact__ukphone--text,
+    .contact__bgphone--text{
+        transform: translateX(-17.9rem);
+        transition: all 1s ease;
+        z-index: 3;
+    }
+
+    .contact__github--text{
+        transform: translateX(-9.8rem);
+        transition: all 1s ease;
+        z-index: 3;
+    }
+
+    .contact__email--text{
+        transform: translateX(-18.5rem);
+        transition: all 1s ease;
+        z-index: 3;
+    }
+
+    .contact__facebook--text{
+        transform: translateX(-13.6rem);
+        transition: all 1s ease;
+        z-index: 3;
+    }
+
+    .contact__instagram--text{
+        transform: translateX(-12.8rem);
+        transition: all 1s ease;
+        z-index: 3;
+    }
+}
+// Media Queries
+@media only screen and (max-width: $bp-l){
+    .contact__bgphone--text{ width: 15rem; }
+}
+
+@media only screen and (max-width: $bp-m){
+    .contact__ukphone--text{ width: 15rem; }
+}
+
+///////////////////////////////
+// EACH ICON HOVER SHOW EFFECT
+///////////////////////////////
+// Only at a certain width
+@media only screen and (min-width: $bp-xm + 0.25){
+    .contact__ukphone--icon:hover + .contact__text--ukphone > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+    }
+
+    .contact__bgphone--icon:hover + .contact__text--bgphone > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+        @media only screen and (max-width: $bp-l){ width: 15rem; }
+    }
+
+    .contact__github--icon:hover + .contact__text--github > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+    }
+
+    .contact__email--icon:hover + .contact__text--email > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+    }
+
+    .contact__facebook--icon:hover + .contact__text--facebook > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+    }
+
+    .contact__instagram--icon:hover + .contact__text--instagram > * {
+        transform: translateX(0);
+        margin-left: 6rem;
+    }
+}
