@@ -80,20 +80,20 @@
       text-align: center;
       color: white;
       font-weight: 300;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       opacity: 0;
       visibility: hidden;
 
       // Media Queries
       @media only screen and (max-width: $bp-l){ width: 80%; }
 
-      @media only screen and (max-width: $bp-m){ font-size: 1.5rem; }
+      @media only screen and (max-width: $bp-m){ font-size: 1.4rem; }
 
-      @media only screen and (max-width: $bp-xxm){ font-size: 1.3rem; }
+      @media only screen and (max-width: $bp-xxm){ font-size: 1.2rem; }
 
-      @media only screen and (max-width: $bp-s){ font-size: 1.1rem; }
+      @media only screen and (max-width: $bp-s){ font-size: 1rem; }
 
-      @media only screen and (max-width: $bp-xxs){ padding: 2.5rem; }
+      @media only screen and (max-width: $bp-xxs){ padding: 2.5rem; font-size: .9rem;}
 
       span{ font-weight: 900; }
    }

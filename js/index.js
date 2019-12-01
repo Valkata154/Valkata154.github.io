@@ -13,8 +13,13 @@ $(document).ready(function(){
         // When in section HEADER
         if(scroll_start >= header && scroll_start < about){
             // Change background of the navbar
-            $(".navbar").css('background-image', 'none');
-            $(".navbar").css('background-color', 'transparent');
+            if($('.about').width() > 901){
+                $(".navbar").css('background-image', 'none');
+                $(".navbar").css('background-color', 'transparent');
+            } else {
+                $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
+                $(".navbar").css('background-color', 'none');
+            }
 
             // Make HOME link active and remove from others
             $("#home").addClass("nav-active");
@@ -32,8 +37,13 @@ $(document).ready(function(){
         // When in section EDUCATION
         }else if(scroll_start >= education && scroll_start < skills){
             // Change background of the navbar
-            $(".navbar").css('background-image', 'none');
-            $(".navbar").css('background-color', 'transparent');
+            if($('.about').width() > 901){
+                $(".navbar").css('background-image', 'none');
+                $(".navbar").css('background-color', 'transparent');
+            } else {
+                $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
+                $(".navbar").css('background-color', 'none');
+            }
 
             // Make EDUCATION link active and remove from others
             $("#home").removeClass("nav-active");
@@ -53,8 +63,13 @@ $(document).ready(function(){
             $("#contact").removeClass("nav-active");
         }else if(scroll_start >= contact ){
             // Change background of the navbar
-            $(".navbar").css('background-image', 'none');
-            $(".navbar").css('background-color', 'transparent');
+            if($('.about').width() > 901){
+                $(".navbar").css('background-image', 'none');
+                $(".navbar").css('background-color', 'transparent');
+            } else {
+                $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
+                $(".navbar").css('background-color', 'none');
+            }
 
             // Make EDUCATION link active and remove from others
             $("#home").removeClass("nav-active");
@@ -322,7 +337,7 @@ $("#subject__button--1").click(function() {
     // Year One
     if(document.querySelector("#education-uni__btn--1").classList.contains("active")){
         document.getElementById('popup__subject').innerHTML = "Computer Systems 1";
-        document.getElementById('popup__details').innerHTML = "<span>This module gave me</span> a practical introduction to the basic workings of computer systems. That included computer hardware architecture, operating systems like Windows and Linux and a practical understanding of the structure and operation of networks, including the Internet. <br><br><span>Learning outcomes</span> include being able to: Identify the main hardware components of a computer, understand the basic architecture and operating principles of a computer, identify the main components of computer networks, understand the basic principles of data communications and computer networks, understand the principles of Operating Systems and describe the main feature of two different common operating systems.<br><br><span> Assessment</span> was in the form of three class tests each having 33.3% of the final module mark. <br><br>Computer Systems - <span>100%</span><br><br>Networking - <span>MARK</span> <br><br>Operating Systems - <span>MARK</span>";
+        document.getElementById('popup__details').innerHTML = "<span>This module gave me</span> a practical introduction to the basic workings of computer systems. That included computer hardware architecture, operating systems like Windows and Linux and a practical understanding of the structure and operation of networks, including the Internet. <br><br><span>Learning outcomes</span> include being able to: Identify the main hardware components of a computer, understand the basic architecture and operating principles of a computer, identify the main components of computer networks, understand the basic principles of data communications and computer networks, understand the principles of Operating Systems and describe the main feature of two different common operating systems.<br><br><span> Assessment</span> was in the form of three class tests each having 33.3% of the final module mark: Computer Systems - <span>100%</span>, Networking - <span>MARK</span>, Operating Systems - <span>MARK</span>.";
     // Year Two
     }else if(document.querySelector("#education-uni__btn--2").classList.contains("active")){
         document.getElementById('popup__subject').innerHTML = "Operating Systems";

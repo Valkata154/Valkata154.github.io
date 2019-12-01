@@ -8,7 +8,14 @@
     background-image: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)), url(../img/background-1.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    @supports not (-webkit-overflow-scrolling: touch) {
+        /* CSS for other than iOS devices */ 
+        background-attachment: scroll;
+    }
+    @supports (-webkit-overflow-scrolling: touch) {
+        /* CSS specific to iOS devices */ 
+        background-attachment: fixed;
+    }
     display: flex;
     justify-content: center;
     align-items: center;

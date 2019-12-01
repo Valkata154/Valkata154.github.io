@@ -138,6 +138,8 @@
             @media only screen and (max-width: $bp-xxs){
                 padding: .5rem .8rem;
                 font-size: .8rem;
+                width: 5rem;
+                margin-right: -2.5rem;
             }
         }
 
@@ -177,6 +179,8 @@
             @media only screen and (max-width: $bp-xxs){
                 padding: .5rem .8rem;
                 font-size: .8rem;
+                width: 5rem;
+                margin-right: -2.5rem;
             }
         }
 
@@ -320,9 +324,11 @@
                 // Media Queries
                 @media only screen and (max-width: $bp-l){ font-size: 1.6rem; }
 
+                @media only screen and (max-width: $bp-m){ font-weight: 700;}
+
                 @media only screen and (max-width: $bp-s){ font-size: 1.3rem; }
 
-                @media only screen and (max-width: $bp-xxs){ font-size: 1rem; }
+                @media only screen and (max-width: $bp-xxs){ font-size: 1rem; margin: 2rem .5rem;}
 
                 // Properties for grade
                 &__grade{
@@ -508,6 +514,8 @@
         }
 
         @media only screen and (max-width: $bp-xs){ margin-right: 2.5rem; }
+
+        @media only screen and (max-width: $bp-xxs){ margin-right: 5rem; }
     }
 
     // Udemy Part
@@ -601,6 +609,8 @@
                 @media only screen and (max-width: $bp-l){ font-size: 1.5rem; }
 
                 @media only screen and (max-width: $bp-lm){ font-size: 1.3rem; }
+
+                @media only screen and (max-width: $bp-m){ font-weight: 700;}
                 
                 // Each course link properties
                 &__link{
@@ -621,6 +631,8 @@
                         font-size: 1rem;
                         margin-top: 0rem;
                     }
+
+                    @media only screen and (max-width: $bp-m){ font-weight: 300;}
 
                     @media only screen and (max-width: $bp-xs){ font-size: .8rem; }
                 }

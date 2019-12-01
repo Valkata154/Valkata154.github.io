@@ -516,12 +516,15 @@
     z-index: 6;
 
     &::before{
-        content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='24' height='24' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");
+       // content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='24' height='24' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");
+        content: url("../img/star-half.png");
+        zoom: 0.5;
+        transform: translateX(-.08rem) translateY(-.06rem);
         position: absolute;
         z-index: 9;
         opacity: 0;
 
         // Media Queries
-        @media only screen and (max-width: $bp-xs){ content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='13' height='17' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");  }
+        //@media only screen and (max-width: $bp-xs){ content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' clip-path='polygon(0 0, 50% 0, 50% 100%, 0% 100%)' stroke='white' stroke-width='1' fill='white' width='13' height='17' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/></svg>");  }
     }
 }

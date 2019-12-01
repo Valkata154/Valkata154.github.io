@@ -19,6 +19,8 @@
     position: relative;
     transition: color .2s .4s, font-weight .2s .4s, border-left .1s, border-right .1s;
 
+    @media only screen and (max-width: $bp-m){ font-weight: 400; }
+
     // Changin the background + effect on each link without the active one at certain width only
     @media only screen and (min-width: $bp-xm + 0.25){
         &:hover:not(.nav-active){
@@ -83,5 +85,7 @@
         font-weight: 500;
         background-color: white !important;
         transition: all;
+
+        @media only screen and (max-width: $bp-m){ font-weight: 700;  }
     }
 }
