@@ -1725,8 +1725,7 @@ html {
     opacity: 0; }
     @media only screen and (max-width: 25em) {
       .star--half::before {
-        zoom: .28;
-        transform: translateX(-0.08rem) translateY(0.14rem); } }
+        zoom: .28; } }
 
 .contact {
   height: auto;
