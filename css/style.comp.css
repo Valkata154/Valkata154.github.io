@@ -265,17 +265,10 @@ html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background-1.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
   display: flex;
   justify-content: center;
   align-items: center; }
-  @supports not (-webkit-overflow-scrolling: touch) {
-    .header {
-      /* CSS for other than iOS devices */
-      background-attachment: scroll; } }
-  @supports (-webkit-overflow-scrolling: touch) {
-    .header {
-      /* CSS specific to iOS devices */
-      background-attachment: fixed; } }
 
 .header-presentation {
   display: flex;
@@ -690,8 +683,8 @@ html {
   font-family: 'Lato', sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background-2.jpg);
   background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: center;
+  background-attachment: scroll;
   display: grid;
   grid-template-rows: min-content minmax(min-content, 77vh);
   grid-template-columns: 65vw 35vw;
@@ -810,16 +803,17 @@ html {
         .education-uni__btn:link, .education-uni__btn:visited {
           padding: 1rem 1.5rem;
           font-size: 1rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .education-uni__btn:link, .education-uni__btn:visited {
+          transition: color 0s, font-weight 0s, translateY .2s; } }
       @media only screen and (max-width: 31.25em) {
         .education-uni__btn:link, .education-uni__btn:visited {
           padding: .5rem 1rem;
           font-size: 1rem; } }
       @media only screen and (max-width: 25em) {
         .education-uni__btn:link, .education-uni__btn:visited {
-          text-align: center; } }
-      @media only screen and (max-width: 21.9em) {
-        .education-uni__btn:link, .education-uni__btn:visited {
           padding: .5rem .8rem;
+          text-align: center;
           font-size: .8rem;
           width: 5rem;
           margin-right: -2.5rem; } }
@@ -853,11 +847,9 @@ html {
           font-size: 1rem; } }
       @media only screen and (max-width: 25em) {
         .education-uni .active {
-          text-align: center; } }
-      @media only screen and (max-width: 21.9em) {
-        .education-uni .active {
           padding: .5rem .8rem;
           font-size: .8rem;
+          text-align: center;
           width: 5rem;
           margin-right: -2.5rem; } }
     .education-uni__btn:not(:last-child) {
@@ -1106,9 +1098,6 @@ html {
         margin-bottom: 2.5rem;
         justify-content: center; } }
     @media only screen and (max-width: 25em) {
-      .education .buttons {
-        margin-right: 2.5rem; } }
-    @media only screen and (max-width: 21.9em) {
       .education .buttons {
         margin-right: 5rem; } }
   .education-udemy {
@@ -1728,6 +1717,10 @@ html {
     position: absolute;
     z-index: 9;
     opacity: 0; }
+    @media only screen and (max-width: 25em) {
+      .star--half::before {
+        zoom: .28;
+        transform: translateX(-0.08rem) translateY(0.14rem); } }
 
 .contact {
   height: auto;

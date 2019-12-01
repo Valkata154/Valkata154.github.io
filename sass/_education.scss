@@ -8,8 +8,8 @@
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url(../img/background-2.jpg);
     background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
+    background-position: center;
+    background-attachment: scroll;
     display: grid;
     grid-template-rows: min-content minmax(min-content, 77vh);
     grid-template-columns: 65vw 35vw;
@@ -128,15 +128,18 @@
                 padding: 1rem 1.5rem;
                 font-size: 1rem; }
 
+            @media only screen and (max-width: $bp-m){
+                transition: color 0s, font-weight 0s, translateY .2s;
+            }
+
             @media only screen and (max-width: $bp-s){
                 padding: .5rem 1rem;
                 font-size: 1rem;
             }
 
-            @media only screen and (max-width: $bp-xs){ text-align: center; }
-
-            @media only screen and (max-width: $bp-xxs){
+            @media only screen and (max-width: $bp-xs){
                 padding: .5rem .8rem;
+                text-align: center; 
                 font-size: .8rem;
                 width: 5rem;
                 margin-right: -2.5rem;
@@ -174,11 +177,10 @@
                 font-size: 1rem;
             }
 
-            @media only screen and (max-width: $bp-xs){ text-align: center; }
-
-            @media only screen and (max-width: $bp-xxs){
+            @media only screen and (max-width: $bp-xs){
                 padding: .5rem .8rem;
                 font-size: .8rem;
+                text-align: center; 
                 width: 5rem;
                 margin-right: -2.5rem;
             }
@@ -513,9 +515,7 @@
             justify-content: center;
         }
 
-        @media only screen and (max-width: $bp-xs){ margin-right: 2.5rem; }
-
-        @media only screen and (max-width: $bp-xxs){ margin-right: 5rem; }
+        @media only screen and (max-width: $bp-xs){ margin-right: 5rem; }
     }
 
     // Udemy Part
