@@ -527,6 +527,8 @@
         // Media Queries
         @media only screen and (max-width: $bp-xs){
             zoom: .28;
+            top: .19rem;
+            left: -.3;
         }
     }
 }
