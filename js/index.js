@@ -10,6 +10,7 @@ $(document).ready(function(){
     
     $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
+        var bool = $(window).scrollTop() + $(window).height() == $(document).height();
         // When in section HEADER
         if(scroll_start >= header && scroll_start < about){
             // Change background of the navbar
@@ -51,7 +52,7 @@ $(document).ready(function(){
             $("#about").removeClass("nav-active");
             $("#skills").removeClass("nav-active");
         // When in section SKILLS
-        }else if(scroll_start >= skills && scroll_start < contact){
+        }else if(scroll_start >= skills && scroll_start < contact && bool === false){
             // Change background of the navbar
             $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
             $(".navbar").css('background-color', 'none');
@@ -61,15 +62,14 @@ $(document).ready(function(){
             $("#education").removeClass("nav-active");
             $("#skills").addClass("nav-active");
             $("#contact").removeClass("nav-active");
-        }else if(scroll_start >= contact ){
+        }else if(scroll_start >= contact || bool === true){
             // Change background of the navbar
-            if($('.about').width() > 901){
-                $(".navbar").css('background-image', 'none');
-                $(".navbar").css('background-color', 'transparent');
-            } else {
-                $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
-                $(".navbar").css('background-color', 'none');
-            }
+            // if($('.about').width() > 901){
+            //     $(".navbar").css('background-image', 'none');
+            //     $(".navbar").css('background-color', 'transparent');
+            // } else {
+            $(".navbar").css('background-image', 'linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7))');
+            $(".navbar").css('background-color', 'none');
 
             // Make EDUCATION link active and remove from others
             $("#home").removeClass("nav-active");
@@ -223,12 +223,12 @@ $(".education-uni__btn--1").click(function() {
         document.getElementById('subject--6').innerHTML = "Mathematics for Software Engineering";
 
         // Each subject grade
-        document.getElementById('grade--1').innerHTML = "---";
-        document.getElementById('grade--2').innerHTML = "---";
-        document.getElementById('grade--3').innerHTML = "---";
-        document.getElementById('grade--4').innerHTML = "---";
-        document.getElementById('grade--5').innerHTML = "---";
-        document.getElementById('grade--6').innerHTML = "---";
+        document.getElementById('grade--1').innerHTML = "94%";
+        document.getElementById('grade--2').innerHTML = "66%";
+        document.getElementById('grade--3').innerHTML = "98%";
+        document.getElementById('grade--4').innerHTML = "74%";
+        document.getElementById('grade--5').innerHTML = "92%";
+        document.getElementById('grade--6').innerHTML = "83%";
      }, 1000);
   });
 
