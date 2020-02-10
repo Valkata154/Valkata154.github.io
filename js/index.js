@@ -259,9 +259,9 @@ $(".education-uni__btn--1").click(function() {
         document.getElementById('subject--6').innerHTML = "Software Engineering Methods";
 
         // Each subject grade
-        document.getElementById('grade--1').innerHTML = "---";
-        document.getElementById('grade--2').innerHTML = "---";
-        document.getElementById('grade--3').innerHTML = "---";
+        document.getElementById('grade--1').innerHTML = "98%";
+        document.getElementById('grade--2').innerHTML = "79%";
+        document.getElementById('grade--3').innerHTML = "90%";
         document.getElementById('grade--4').innerHTML = "---";
         document.getElementById('grade--5').innerHTML = "---";
         document.getElementById('grade--6').innerHTML = "---";
@@ -368,7 +368,7 @@ $("#subject__button--2").click(function() {
     // Year Two
     }else if(document.querySelector("#education-uni__btn--2").classList.contains("active")){
         document.getElementById('popup__subject').innerHTML = "Database Systems";
-        document.getElementById('popup__details').innerHTML = "<span>In this module I gained</span> knowledge about database theory, database design, database use, database administration, non-relational database systems and security. <br><br><span>Learning outcomes</span> include being able to: describe database architecture with reference to current standards, design and implement a relational database schema using standard techniques, use standard languages to access and manipulate data, perform basic administrative operations on an example database platform, secure database systems against unauthorised access.<br><br><span>Assessment</span> was in the form of one coursework (<span>92%</span>) having 50% of the final module mark and one written exam (<span>MARK</span>) having 50% of the final module mark.";
+        document.getElementById('popup__details').innerHTML = "<span>In this module I gained</span> knowledge about database theory, database design, database use, database administration, non-relational database systems and security. <br><br><span>Learning outcomes</span> include being able to: describe database architecture with reference to current standards, design and implement a relational database schema using standard techniques, use standard languages to access and manipulate data, perform basic administrative operations on an example database platform, secure database systems against unauthorised access.<br><br><span>Assessment</span> was in the form of one coursework (<span>92%</span>) having 50% of the final module mark and one written exam (<span>66%</span>) having 50% of the final module mark.";
     // Year Three
     }else if(document.querySelector("#education-uni__btn--3").classList.contains("active")){
         document.getElementById('popup__subject').innerHTML = "No Information At The Moment";
