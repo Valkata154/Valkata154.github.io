@@ -283,17 +283,17 @@ $(".education-uni__btn--1").click(function() {
         document.getElementById('uni__year').innerHTML = "Third Year";
 
         // Each subject name
-        document.getElementById('subject--1').innerHTML = "No Information At The Moment";
-        document.getElementById('subject--2').innerHTML = "No Information At The Moment";
-        document.getElementById('subject--3').innerHTML = "No Information At The Moment";
+        document.getElementById('subject--1').innerHTML = "Artificial Intelligence";
+        document.getElementById('subject--2').innerHTML = "Data Analytics";
+        document.getElementById('subject--3').innerHTML = "Software Engineering";
         document.getElementById('subject--4').innerHTML = "No Information At The Moment";
         document.getElementById('subject--5').innerHTML = "No Information At The Moment";
         document.getElementById('subject--6').innerHTML = "No Information At The Moment";
 
         // Each subject grade
-        document.getElementById('grade--1').innerHTML = "---";
-        document.getElementById('grade--2').innerHTML = "---";
-        document.getElementById('grade--3').innerHTML = "---";
+        document.getElementById('grade--1').innerHTML = "91%";
+        document.getElementById('grade--2').innerHTML = "71%";
+        document.getElementById('grade--3').innerHTML = "81%";
         document.getElementById('grade--4').innerHTML = "---";
         document.getElementById('grade--5').innerHTML = "---";
         document.getElementById('grade--6').innerHTML = "---";
