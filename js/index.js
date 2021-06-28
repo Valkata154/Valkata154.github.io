@@ -262,9 +262,9 @@ $(".education-uni__btn--1").click(function() {
         document.getElementById('grade--1').innerHTML = "98%";
         document.getElementById('grade--2').innerHTML = "79%";
         document.getElementById('grade--3').innerHTML = "90%";
-        document.getElementById('grade--4').innerHTML = "---";
-        document.getElementById('grade--5').innerHTML = "---";
-        document.getElementById('grade--6').innerHTML = "---";
+        document.getElementById('grade--4').innerHTML = "C19";
+        document.getElementById('grade--5').innerHTML = "C19";
+        document.getElementById('grade--6').innerHTML = "C19";
      }, 1000);
   });
 
@@ -286,17 +286,17 @@ $(".education-uni__btn--1").click(function() {
         document.getElementById('subject--1').innerHTML = "Artificial Intelligence";
         document.getElementById('subject--2').innerHTML = "Data Analytics";
         document.getElementById('subject--3').innerHTML = "Software Engineering";
-        document.getElementById('subject--4').innerHTML = "No Information At The Moment";
-        document.getElementById('subject--5').innerHTML = "No Information At The Moment";
-        document.getElementById('subject--6').innerHTML = "No Information At The Moment";
+        document.getElementById('subject--4').innerHTML = "Computing in Contemporary Society";
+        document.getElementById('subject--5').innerHTML = "Group Project";
+        document.getElementById('subject--6').innerHTML = "Advanced Database Systems";
 
         // Each subject grade
         document.getElementById('grade--1').innerHTML = "91%";
         document.getElementById('grade--2').innerHTML = "71%";
         document.getElementById('grade--3').innerHTML = "81%";
-        document.getElementById('grade--4').innerHTML = "---";
-        document.getElementById('grade--5').innerHTML = "---";
-        document.getElementById('grade--6').innerHTML = "---";
+        document.getElementById('grade--4').innerHTML = "74%";
+        document.getElementById('grade--5').innerHTML = "73%";
+        document.getElementById('grade--6').innerHTML = "90%";
      }, 1000);
   });
 
